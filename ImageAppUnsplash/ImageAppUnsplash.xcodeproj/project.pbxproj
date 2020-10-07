@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A064DBA252DE19300C9F23D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A064DB9252DE19300C9F23D /* ImageCollectionViewCell.swift */; };
+		1A064DBF252DF52900C9F23D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A064DBE252DF52900C9F23D /* LoginViewModel.swift */; };
+		1A064DC6252DFB5300C9F23D /* ImageMainViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A064DC5252DFB5300C9F23D /* ImageMainViewPager.swift */; };
 		1A583679252CCCE800CB275F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A583678252CCCE800CB275F /* AppDelegate.swift */; };
 		1A58367B252CCCE800CB275F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58367A252CCCE800CB275F /* SceneDelegate.swift */; };
 		1A58367D252CCCE800CB275F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58367C252CCCE800CB275F /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		1A064DB9252DE19300C9F23D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A064DBE252DF52900C9F23D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1A064DC5252DFB5300C9F23D /* ImageMainViewPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMainViewPager.swift; sourceTree = "<group>"; };
 		1A583675252CCCE800CB275F /* ImageAppUnsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageAppUnsplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A583678252CCCE800CB275F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A58367A252CCCE800CB275F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A064DC4252DFB2A00C9F23D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1A064DC5252DFB5300C9F23D /* ImageMainViewPager.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		1A58366C252CCCE800CB275F = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,7 @@
 		1A583677252CCCE800CB275F /* ImageAppUnsplash */ = {
 			isa = PBXGroup;
 			children = (
+				1A064DC4252DFB2A00C9F23D /* Utility */,
 				1A5836AE252CCD4F00CB275F /* Model */,
 				1A5836B1252CCD7800CB275F /* Controller */,
 				1A5836B0252CCD6D00CB275F /* View */,
@@ -166,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				1A5836B7252CD0DB00CB275F /* ImageViewModel.swift */,
+				1A064DBE252DF52900C9F23D /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -452,7 +466,9 @@
 				1A5836B8252CD0DB00CB275F /* ImageViewModel.swift in Sources */,
 				1A583679252CCCE800CB275F /* AppDelegate.swift in Sources */,
 				1A58367B252CCCE800CB275F /* SceneDelegate.swift in Sources */,
+				1A064DC6252DFB5300C9F23D /* ImageMainViewPager.swift in Sources */,
 				1A5836B3252CD0A900CB275F /* ImagesModel.swift in Sources */,
+				1A064DBF252DF52900C9F23D /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
