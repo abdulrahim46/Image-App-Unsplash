@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A064DBA252DE19300C9F23D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A064DB9252DE19300C9F23D /* ImageCollectionViewCell.swift */; };
 		1A583679252CCCE800CB275F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A583678252CCCE800CB275F /* AppDelegate.swift */; };
 		1A58367B252CCCE800CB275F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58367A252CCCE800CB275F /* SceneDelegate.swift */; };
 		1A58367D252CCCE800CB275F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A58367C252CCCE800CB275F /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A064DB9252DE19300C9F23D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A583675252CCCE800CB275F /* ImageAppUnsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageAppUnsplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A583678252CCCE800CB275F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A58367A252CCCE800CB275F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		1A5836B0252CCD6D00CB275F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A064DB9252DE19300C9F23D /* ImageCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,7 +206,6 @@
 				5D9EFBD738BA460DE5B4E976 /* Pods-ImageAppUnsplashTests.debug.xcconfig */,
 				60F9611B71F66B571B0D0234 /* Pods-ImageAppUnsplashTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -445,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A064DBA252DE19300C9F23D /* ImageCollectionViewCell.swift in Sources */,
 				1A58367D252CCCE800CB275F /* ViewController.swift in Sources */,
 				1A5836B8252CD0DB00CB275F /* ImageViewModel.swift in Sources */,
 				1A583679252CCCE800CB275F /* AppDelegate.swift in Sources */,
