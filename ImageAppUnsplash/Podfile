@@ -10,7 +10,8 @@ target 'ImageAppUnsplash' do
 pod 'Alamofire'
 pod 'DTPagerController'
 pod 'RxSwift'
-pod 'RxCocoa'   
+pod 'RxCocoa' 
+pod 'TinderSwipeView'  
 
   target 'ImageAppUnsplashTests' do
     inherit! :search_paths

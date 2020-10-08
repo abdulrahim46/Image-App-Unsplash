@@ -7,12 +7,14 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - TinderSwipeView (1.1.8)
 
 DEPENDENCIES:
   - Alamofire
   - DTPagerController
   - RxCocoa
   - RxSwift
+  - TinderSwipeView
 
 SPEC REPOS:
   trunk:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - TinderSwipeView
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  TinderSwipeView: 13e7de167edb6b9883b398878a0e36e3633e01a0
 
-PODFILE CHECKSUM: 796d04007b9daf5c3a38439c0ec2cf1f73cadcfd
+PODFILE CHECKSUM: 517bc3d1f3b8ffa976f963b43f7741be05d38a5b
 
 COCOAPODS: 1.9.3

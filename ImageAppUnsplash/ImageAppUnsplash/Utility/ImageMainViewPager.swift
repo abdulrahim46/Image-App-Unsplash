@@ -34,7 +34,7 @@ class ImageMainViewPager: DTPagerController {
         self.textColor = UIColor.magenta
         self.view.backgroundColor = UIColor.white
         let story = UIStoryboard(name: "Main", bundle: nil)
-        let objVC = story.instantiateViewController(withIdentifier: "viewController") as? ViewController
+        let objVC = story.instantiateViewController(withIdentifier: "swipeViewController") as? SwipeViewController
         let objLikeVC = story.instantiateViewController(withIdentifier: "viewController") as? ViewController
         objVC?.title = "Swipe"
         objLikeVC?.title = "Likes"

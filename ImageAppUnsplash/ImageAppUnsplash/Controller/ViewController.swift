@@ -12,6 +12,7 @@ import RxCocoa
 class ViewController: UIViewController {
     
     private let loginViewModel = LoginViewModel()
+    private let imageVM = ImageViewModel()
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var userNameTextField: UITextField!
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  imageVM.getImages()
         setUp()
     }
     
