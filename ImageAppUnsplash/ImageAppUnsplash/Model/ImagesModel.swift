@@ -9,8 +9,8 @@ import Foundation
 
 struct ImagesModel: Decodable {
     
-    var id: String = "MIKe"
-    var regular: String = "https://images.unsplash.com/photo-1601758124277-f0086d5ab050?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3MjMwN30"
+    let id: String?
+    let regular: URL?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -22,9 +22,9 @@ struct ImagesModel: Decodable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(String.self, forKey: .id) ?? " jansdkj "
+        id = try values.decodeIfPresent(String.self, forKey: .id)
         let nameContainer = try values.nestedContainer(keyedBy: Urls.self, forKey: .urls)
-        self.regular = try nameContainer.decode(String.self, forKey: .regular)
+        self.regular = try nameContainer.decode(URL.self, forKey: .regular)
     }
     
 }

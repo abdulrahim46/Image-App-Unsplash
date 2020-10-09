@@ -10,6 +10,6 @@ import UIKit
 
 struct UserModel {
 
-    let name : String!
-    let num : String!
+    let name : String?
+    let num : String?
 }

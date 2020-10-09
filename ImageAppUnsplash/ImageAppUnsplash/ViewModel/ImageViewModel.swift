@@ -13,21 +13,27 @@ class ImageViewModel {
 
     var arrayImages = [ImagesModel]()
     
-    func getImages() {
-        AF.request("https://api.unsplash.com/photos/?client_id=QCauL1KMtXbjCdNib8iIoGxKWgHJsfWmqU4pQlKTly8").response { response in
-            if let data = response.data {
-                do{
-                    let response = try JSONDecoder().decode([ImagesModel].self, from: data)
-                    print(response)
-                    self.arrayImages.append(contentsOf: response)
-                    DispatchQueue.main.async{
-                    //    self.vc?.tblView.reloadData()
-                    }
-                }catch let err{
-                    print(err.localizedDescription)
-                }
-            }
-        }
-    }
+    //private let imageService: ImageServiceProtocol
+    
+//    init(imageService: ImageServiceProtocol = ImageService()) {
+//        self.imageService = imageService
+//    }
+    
+//    func getImages() {
+//        AF.request("https://api.unsplash.com/photos/?client_id=QCauL1KMtXbjCdNib8iIoGxKWgHJsfWmqU4pQlKTly8").response { response in
+//            if let data = response.data {
+//                do{
+//                    let response = try JSONDecoder().decode([ImagesModel].self, from: data)
+//                    print(response)
+//                    self.arrayImages.append(contentsOf: response)
+//                    DispatchQueue.main.async{
+//                    //    self.vc?.tblView.reloadData()
+//                    }
+//                }catch let err{
+//                    print(err.localizedDescription)
+//                }
+//            }
+//        }
+//    }
     
 }

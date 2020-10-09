@@ -36,7 +36,7 @@ class CustomView: UIView {
     func commonInit() {
         Bundle.main.loadNibNamed(CustomView.className, owner: self, options: nil)
         contentView.fixInView(self)
-        imageViewBackground.isHidden = true
+        //imageViewBackground.isHidden = true
         imageViewProfile.contentMode = .scaleAspectFill
         imageViewProfile.layer.cornerRadius = 30
         imageViewProfile.clipsToBounds = true
@@ -45,7 +45,7 @@ class CustomView: UIView {
     
     private func attributeStringForModel(userModel:UserModel) -> NSAttributedString{
         
-        let attributedText = NSMutableAttributedString(string: userModel.name, attributes: [.foregroundColor: UIColor.white,.font:UIFont.boldSystemFont(ofSize: 25)])
+        let attributedText = NSMutableAttributedString(string: userModel.name ?? "NIL", attributes: [.foregroundColor: UIColor.white,.font:UIFont.boldSystemFont(ofSize: 25)])
         attributedText.append(NSAttributedString(string: "\nnums :\(userModel.num!) - (nib view)" , attributes: [.foregroundColor: UIColor.white,.font:UIFont.systemFont(ofSize: 18)]))
         return attributedText
     }
