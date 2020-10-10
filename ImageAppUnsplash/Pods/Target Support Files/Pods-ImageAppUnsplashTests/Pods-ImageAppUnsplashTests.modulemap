@@ -1,6 +1,0 @@
-framework module Pods_ImageAppUnsplashTests {
-  umbrella header "Pods-ImageAppUnsplashTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

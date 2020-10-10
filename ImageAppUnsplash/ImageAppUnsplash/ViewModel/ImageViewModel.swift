@@ -6,34 +6,113 @@
 //
 
 import UIKit
-import Alamofire
+import RxSwift
+import RxCocoa
 
-class ImageViewModel {
+class ImageViewModel:BaseViewModel {
     
+    private var images = [ImagesModel]()
+    private let isLoading = BehaviorRelay<Bool>(value: false)
+    
+    var pageNumber = 1
+    
+    var loading: Driver<Bool> {
+        return isLoading.asDriver()
+    }
+    
+    var image : [ImagesModel] {
+        return images
+    }
+    
+    
+    // Mark:- API call to fetch Images
+    
+    func getUnSplashImages(completion: @escaping () -> Void) {
+        
+        if pageNumber == 1 {
+            isLoading.accept(true)
+        }
+        
+        HttpClient.shared.getImages(page: pageNumber) { result in
+            self.isLoading.accept(false)
+            print(result)
+            DispatchQueue.main.async() { [weak self] in
+                
+                guard let self = self else { return }
+                
+                switch result {
+                
+                case .success(let images):
+                    if self.pageNumber == 1 {
+                        self.images = images
+                        
+                    } else {
+                        self.images.append(contentsOf: images)
+                    }
+                    
+                    completion()
+                 
+                case .failure(let error):
+                    print(error.localizedDescription)
+                
+                }
+                
+            }
+        }
+    }
+    
+    // MArk:- API call to save like images
+    func likePhoto(index: Int) {
+        let imageUrl = images[index].urls?.regular
+        let userName = images[index].user?.username
+        let likes = images[index].likes
 
-    var arrayImages = [ImagesModel]()
+        let data = [
+            "imageUrl": imageUrl ?? "",
+            "userName": userName ?? "",
+            "likes": likes ?? 0] as [String : Any]
+
+        // Creating Document Reference
+
+        let docRef = dbCollection.whereField("imageUrl", isEqualTo: imageUrl ?? "").limit(to: 1)
+
+        // Checking if user has already liked the photo at current index
     
-    //private let imageService: ImageServiceProtocol
+        docRef.getDocuments { (querysnapshot, error) in
+
+            if error != nil {
+//                AlertBuilder.failureAlertWithMessage(message: error?.localizedDescription ?? "Could not connect to Database")
+
+            } else {
+
+                if let doc = querysnapshot?.documents, !doc.isEmpty {
+                    // Document is already present
+                    return
+
+                } else {
+
+                    // Adding picture to LikedPhotos DataBase
+                    
+                    self.dbCollection.document().setData(data) { (error) in
+
+                        if error != nil {
+                            print(error?.localizedDescription ?? "Could not add image to Database")
+//                            AlertBuilder.failureAlertWithMessage(message: error?.localizedDescription ?? "Could not add image to Database")
+                        }
+                    }
+                }
+            }
+        }
+    }
     
-//    init(imageService: ImageServiceProtocol = ImageService()) {
-//        self.imageService = imageService
-//    }
-    
-//    func getImages() {
-//        AF.request("https://api.unsplash.com/photos/?client_id=QCauL1KMtXbjCdNib8iIoGxKWgHJsfWmqU4pQlKTly8").response { response in
-//            if let data = response.data {
-//                do{
-//                    let response = try JSONDecoder().decode([ImagesModel].self, from: data)
-//                    print(response)
-//                    self.arrayImages.append(contentsOf: response)
-//                    DispatchQueue.main.async{
-//                    //    self.vc?.tblView.reloadData()
-//                    }
-//                }catch let err{
-//                    print(err.localizedDescription)
-//                }
-//            }
-//        }
-//    }
+    func imageUrl(for index: Int) -> URL? {
+
+        let url = images[index].urls?.regular
+
+        if let url = URL(string: url ?? "") {
+            return url
+        }
+        return nil
+    }
     
 }
