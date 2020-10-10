@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwipeVCViewController" customModule="ImageAppUnsplash" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicatorView" destination="a7U-2x-2Dq" id="a9a-06-pGf"/>
+                <outlet property="likeButton" destination="vuj-JF-cSf" id="Iwc-9N-T8L"/>
+                <outlet property="skipButton" destination="3in-lQ-mhJ" id="6ew-OK-a63"/>
+                <outlet property="swipeCardView" destination="2zh-tm-RXr" id="MtQ-DQ-sfm"/>
+                <outlet property="view" destination="Jnl-PE-3Ck" id="2bw-bI-McB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Jnl-PE-3Ck">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zh-tm-RXr" customClass="KolodaView" customModule="Koloda">
+                    <rect key="frame" x="0.0" y="44" width="414" height="668"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="a7U-2x-2Dq">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="scD-HB-J0F">
+                    <rect key="frame" x="97" y="752" width="220" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3in-lQ-mhJ">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="mVa-8h-s05"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="noButton_Selected">
+                                <color key="titleShadowColor" systemColor="darkTextColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCirculer" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" red="0.70196078429999997" green="0.72941176470000002" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="5" height="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" alpha="0.55000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuj-JF-cSf">
+                            <rect key="frame" x="140" y="0.0" width="80" height="80"/>
+                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <state key="normal" image="yesButtonSelected">
+                                <color key="titleColor" systemColor="systemRedColor"/>
+                                <color key="titleShadowColor" systemColor="systemRedColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCirculer" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" red="0.70196078429999997" green="0.72941176470000002" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="5" height="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vuj-JF-cSf" firstAttribute="width" secondItem="3in-lQ-mhJ" secondAttribute="width" id="L8E-JN-n1o"/>
+                        <constraint firstAttribute="height" constant="80" id="isk-21-ZDs"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7EW-Nd-ujH"/>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="a7U-2x-2Dq" firstAttribute="centerX" secondItem="Jnl-PE-3Ck" secondAttribute="centerX" id="2ha-rB-zkf"/>
+                <constraint firstItem="scD-HB-J0F" firstAttribute="centerX" secondItem="Jnl-PE-3Ck" secondAttribute="centerX" id="9Lh-fo-LDR"/>
+                <constraint firstItem="2zh-tm-RXr" firstAttribute="top" secondItem="7EW-Nd-ujH" secondAttribute="top" id="9nA-Mw-P7o"/>
+                <constraint firstItem="7EW-Nd-ujH" firstAttribute="trailing" secondItem="2zh-tm-RXr" secondAttribute="trailing" id="Bcu-yT-vm1"/>
+                <constraint firstItem="2zh-tm-RXr" firstAttribute="leading" secondItem="7EW-Nd-ujH" secondAttribute="leading" id="bHM-dn-7sm"/>
+                <constraint firstItem="7EW-Nd-ujH" firstAttribute="bottom" secondItem="scD-HB-J0F" secondAttribute="bottom" constant="30" id="fTQ-kU-nNM"/>
+                <constraint firstItem="scD-HB-J0F" firstAttribute="top" secondItem="2zh-tm-RXr" secondAttribute="bottom" constant="40" id="kNu-7I-v8p"/>
+                <constraint firstItem="a7U-2x-2Dq" firstAttribute="centerY" secondItem="Jnl-PE-3Ck" secondAttribute="centerY" id="x2u-Ja-Pfb"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noButton_Selected" width="100" height="100"/>
+        <image name="yesButtonSelected" width="100" height="100"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
