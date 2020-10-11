@@ -11,5 +11,4 @@ import FirebaseFirestore
 
 class BaseViewModel {
     let dbCollection = Firestore.firestore().collection(Constant.FireStore.Collections.likedPhotos)
-    //Firestore.firestore().collection(Constant.FireStore.Collections.likedPhotos)
 }

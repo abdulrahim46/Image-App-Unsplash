@@ -75,29 +75,21 @@ class ImageViewModel:BaseViewModel {
         // Creating Document Reference
 
         let docRef = dbCollection.whereField("imageUrl", isEqualTo: imageUrl ?? "").limit(to: 1)
-
-        // Checking if user has already liked the photo at current index
-    
+        
         docRef.getDocuments { (querysnapshot, error) in
 
             if error != nil {
-//                AlertBuilder.failureAlertWithMessage(message: error?.localizedDescription ?? "Could not connect to Database")
-
+                print(error?.localizedDescription)
             } else {
 
                 if let doc = querysnapshot?.documents, !doc.isEmpty {
-                    // Document is already present
                     return
-
                 } else {
-
-                    // Adding picture to LikedPhotos DataBase
                     
                     self.dbCollection.document().setData(data) { (error) in
 
                         if error != nil {
                             print(error?.localizedDescription ?? "Could not add image to Database")
-//                            AlertBuilder.failureAlertWithMessage(message: error?.localizedDescription ?? "Could not add image to Database")
                         }
                     }
                 }
