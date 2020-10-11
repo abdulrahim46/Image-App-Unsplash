@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LikeViewController" customModule="ImageAppUnsplash" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="mOZ-wL-toA" id="Bws-7q-jAi"/>
-                <outlet property="collectionLayout" destination="6wQ-md-XHX" id="Zs6-kL-hzK"/>
+                <outlet property="collectionLayout" destination="aaH-uP-q8P" id="bOK-e1-Ioc"/>
                 <outlet property="collectionView" destination="DYS-1r-RYr" id="vIw-am-Pk9"/>
                 <outlet property="view" destination="eJf-gR-Utx" id="qoL-np-IHh"/>
             </connections>
@@ -23,7 +23,7 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DYS-1r-RYr">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" red="0.96078431369999995" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6wQ-md-XHX">
+                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aaH-uP-q8P">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>

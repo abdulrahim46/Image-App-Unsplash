@@ -29,13 +29,12 @@ class LikeImagesViewModel: BaseViewModel {
         // Getting all liked images from FireStore
         dbCollection.getDocuments { (snapShot,error) in
             
-            guard let snap = snapShot else { return }
+            guard snapShot != nil else { return }
             
             self.isLoading.accept(false)
             
             if let error = error {
-               // AlertBuilder.failureAlertWithMessage(message: error.localizedDescription)
-
+                print(error.localizedDescription)
             } else if let snapShot = snapShot {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase

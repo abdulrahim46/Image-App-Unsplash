@@ -9,9 +9,6 @@ import Foundation
 
 import Foundation
 
-// Declaring properties as optional here as Unsplash API sometimes may not return all values in every
-// object or return null which leads a codable limitation.
-
 struct ImagesModel: Decodable, Equatable {
     let id: String?
     let urls: URLS?
@@ -24,16 +21,6 @@ struct ImagesModel: Decodable, Equatable {
         self.urls = urls
         self.user = user
         self.likes = likes
-    }
-    
-    // MARK: - Equatable Protocol
-    
-    static func ==(lhs: ImagesModel, rhs: ImagesModel) -> Bool {
-        
-        if lhs.id == rhs.id {
-            return true
-        }
-        return false
     }
 }
 

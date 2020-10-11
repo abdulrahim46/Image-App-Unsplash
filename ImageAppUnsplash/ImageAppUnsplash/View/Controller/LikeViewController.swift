@@ -10,16 +10,9 @@ import RxSwift
 
 class LikeViewController: UIViewController {
 
-    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout! {
-        didSet {
-            collectionLayout.estimatedItemSize = CGSize(width: 105 / 1 , height: 100)
-        }
-    }
+    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout! 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var collectionView: UICollectionView! {
-        didSet {
-        }
-    }
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel = LikeImagesViewModel()
     let disposeBag = DisposeBag()
@@ -56,7 +49,7 @@ class LikeViewController: UIViewController {
 extension LikeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / 1 , height: 200)
+        return CGSize(width: collectionView.frame.width / 2 , height: 200)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
