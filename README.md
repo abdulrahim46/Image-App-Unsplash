@@ -30,6 +30,7 @@ Image App-Unsplash is a demo app for dating.
 
 ## Features
 
+- [x] Used GitHub for version control(you can check the git version history)
 - [x] Unsplash Images API Using Pagination
 - [x] Card View For Images
 - [x] A dedicated screen to view liked images
@@ -39,7 +40,7 @@ Image App-Unsplash is a demo app for dating.
 - [x] Network Requests using Alamofire
 
 ### Cool Features
-
+- [x] Login screen for user authentication
 - [x] Like Swipe View
 - [x] Swipe Right To Like An Image
 - [x] Swipe Left To Skip An Image
