@@ -70,7 +70,3 @@ is a structural design pattern that separates objects into three distinct groups
 - No Internet Connectivity Handling
 - Add a button to undo swipe card action
 - Preview liked image with details in full screen
-
-### Todos
- - will update Api calls to Rxswift.
-
